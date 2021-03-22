@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+    </head>
+
+    <body>
+
+       <center>
+        <img src = <%= data.profile_picture %> /><hr><br><br>
+        <h2>Hola , <%= data.fname%></h2><br><br>
+
+        <h2>Edit details</h2><hr><br>
+
+        <form method = "POST" action = "/update">
+            
+            <input type = "text" value = '<%= data.p_id%>' name = "p_id" id = "p_id" readonly/>
+            <input type = "text" value = '<%= data.p_token%>' name = "p_token" id = "p_token" readonly/>
+ 
+            <input type = "text" value = '<%= data.fname%>' name = "fname" id = "fname" required/>
+            <input type = "text" value = '<%= data.lname%>' name = "lname" id = "lname" required/>
+            <input type = "text" value = '<%= data.profile_picture%>' name = "image" id = "image" required/>
+            <input type = "number" value = '<%= data.roll%>' id = "roll" name = "roll" required />
+            <select id="branch" name="branch" value = '<%= data.branch%>'>
+                <option value="cse">CSE</option>
+                <option value="mnc">MNC</option>
+                <option value="ece">ECE</option>
+                <option value="eee">EEE</option>
+                <option value="me">ME</option>
+                <option value="ep">EP</option>
+                <option value="cl">CL</option>
+                <option value="cst">CST</option>
+                <option value="ce">CE</option>
+                <option value="bt">BT</option>
+              </select><br><br>
+              <label for="about" > Stack: </label><br>
+              <input type = "text" value='<%= data.stack%>' name = "stack" /><br><br>
+              
+              <input type = "submit" value = "Update">
+
+
+        </form>
+
+
+        </center>
+
+
+    </body>
+</html>

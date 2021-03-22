@@ -1,0 +1,18 @@
+<head>
+    <title>Search Result</title>
+</head>
+
+<body>
+
+<br> <center>
+    <h3>All People : <%= result.length%></h3><br><hr>
+    <% result.forEach(function(r) { %>
+       <p> <%= r.fname%> <%= r.lname%></p>
+        <br><img src=<%= r.profile_picture%> width="50" height="50">
+           
+            <p>Stack : <%= r.stack%></p>
+            <a href = "/profile/<%= r.p_id%>" >View Profile</a>
+            <hr>
+        <%})%>
+    </center>
+</body>
