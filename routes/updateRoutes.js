@@ -14,7 +14,8 @@ update_router.post('/update' , (req , res) => {
         roll : req.body.roll,
         branch: req.body.branch,
         profile_picture : req.body.image,
-        stack: req.body.stack
+        stack: req.body.stack,
+        interests : req.body.interests
 
         }}
     )

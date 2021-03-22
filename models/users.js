@@ -11,7 +11,8 @@ let userSchema = new Schema({
     roll:Number,
     branch:String,
     profile_picture:String,
-    stack:String
+    stack:String,
+    interests:String
 
 })
 

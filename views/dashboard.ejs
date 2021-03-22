@@ -5,9 +5,16 @@
 
     <body>
 
+        
+
        <center>
-        <img src = <%= data.profile_picture %> /><hr><br><br>
-        <h2>Hola , <%= data.fname%></h2><br><br>
+        <img src = <%= data.profile_picture %> /><hr><br>
+        <h2>Hola , <%= data.fname%></h2>
+
+        <p>
+            <a href = '/' >Logout</a> |
+            <a href = '/profile/<%= data.p_id%>'>User Profile</a>
+        </p> 
 
         <h2>Edit details</h2><hr><br>
 
@@ -34,6 +41,8 @@
               </select><br><br>
               <label for="about" > Stack: </label><br>
               <input type = "text" value='<%= data.stack%>' name = "stack" /><br><br>
+              <label for="about" > Interests: </label><br>
+              <input type = "text" value='<%= data.interests%>' name = "interests" /><br><br>
               
               <input type = "submit" value = "Update">
 
